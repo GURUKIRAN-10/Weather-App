@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" href="img/clear.png" />
+</head>
+<body>
+    <div class="card">
+        <!-- Search Section -->
+        <div class="search">
+          <label for="citySelect">Select City:</label>
+          <select id="citySelect">
+            <option value="Delhi">Delhi</option>
+            <option value="Mumbai">Mumbai</option>
+            <option value="Chennai">Chennai</option>
+            <option value="Bangalore">Bangalore</option>
+            <option value="Kolkata">Kolkata</option>
+            <option value="Hyderabad">Hyderabad</option>
+          </select>
+          
+          <label for="tempUnit">Select Temperature Unit:</label>
+          <select id="tempUnit">
+            <option value="C">Celsius</option>
+            <option value="F">Fahrenheit</option>
+          </select>
+          
+          <button class="btn" onclick="fetchWeatherData()">Get Weather</button>
+        </div>
+      
+        <!-- Current Weather Section -->
+        <div class="weather">
+          <p id="temperature">Temperature: N/A</p>
+          <p id="feelsLike">Feels Like: N/A</p>
+          <p id="humidity">Humidity: N/A</p>
+          <p id="windSpeed">Wind Speed: N/A</p>
+        </div>
+      
+        <!-- Daily Weather Summary -->
+        <div class="summary">
+          <h2>Daily Weather Summary</h2>
+          <div class="daily-summary">
+            <p>Average Temperature: <span id="avg-temp">N/A</span>°C</p>
+            <p>Max Temperature: <span id="max-temp">N/A</span>°C</p>
+            <p>Min Temperature: <span id="min-temp">N/A</span>°C</p>
+            <p>Dominant Weather: <span id="dom-weather">N/A</span></p>
+          </div>
+        </div>
+      
+        <!-- Chart for Weather Trends -->
+        <canvas id="weatherChart"></canvas>
+    </div>      
+  
+  <script src="./script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+</body>
+</html>
